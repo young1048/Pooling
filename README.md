@@ -2,7 +2,7 @@
 # Istruction:
 ==============================================================
 
-* *1)* Create a Pool containers: Tools/Create
+* *1)* Create a Pool container: Tools/Create
 
 ![Create](https://smallthinggames.com/UnityTutorials/Pooling/s1.png)
 
