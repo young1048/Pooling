@@ -1,8 +1,8 @@
 
-# Istruction:
+## Istruction:
 ==============================================================
 
-* *1)* Create a Pool container: Tools/Create
+* *1)* Create a Pool container: **Tools/Create**
 
 ![Create](https://smallthinggames.com/UnityTutorials/Pooling/s1.png)
 
@@ -11,7 +11,7 @@
 
 
 
-* *2)* Create a database: Tools/Create database
+* *2)* Create a database: **Tools/Create database**
 
 ![Create Database](https://smallthinggames.com/UnityTutorials/Pooling/s2.png)
 
@@ -45,7 +45,7 @@ public class TestObject : Util_PoolObject {
 
 
 
-# Create Object
+## Create Object:
 ==============================================================
 
 After created the database and container database, you can create you object with a simple function:
@@ -58,14 +58,14 @@ Where *MYPOOL* is the tag setted inside database and *MyObject* is the object dr
 
 
 
-# Video tutorial
+## Video tutorial:
 ==============================================================
 
 https://smallthinggames.com/UnityTutorials/Pooling/Pooling.mp4
 
 
 
-# Unity Package
+## Unity Package:
 ==============================================================
 
 http://smallthinggames.com/UnityTutorials/Pooling/Pooling.unitypackage
@@ -73,7 +73,8 @@ http://smallthinggames.com/UnityTutorials/Pooling/Pooling.unitypackage
 
 # Contributing
 
-Please read our contributing guidelines prior to submitting a Pull Request.
+I love your contributions. If you're looking to submit changes, feel free to submit a PR!
+
 
 # License
 
