@@ -22,6 +22,11 @@ public class Util_PoolManagerDatabaseEditor : Editor {
 
 	private void __refresh() {
 
+		if(Util_PoolLoading.Instance == null) {
+
+			Util_PoolLoading.Instance = myScript.transform.parent.GetComponent<Util_PoolLoading>();
+		}
+
 		if(Util_PoolLoading.Instance != null) {
 
 			_keys = new string[Util_PoolLoading.Instance._keys.Count];
@@ -136,6 +141,13 @@ public class Util_PoolManagerDatabaseEditor : Editor {
 
 			PoolingDefinition def = myScript._poolingDefinitions[i];
 
+			if(def._object == null) {
+
+				RemoveAt<PoolingDefinition>(ref myScript._poolingDefinitions, i);
+
+				return;
+			}
+
 			EditorGUILayout.Space();
 			EditorGUILayout.BeginHorizontal();
 
@@ -234,7 +246,15 @@ public class Util_PoolManagerDatabaseEditor : Editor {
 
 				__refresh();
 			}
-				
+
+			for(int i = 0; i < _keys.Length; ++i) {
+
+				if(string.IsNullOrEmpty(_keys[i])) {
+					
+					RemoveAt<string>(ref _keys, i);
+				}
+			}
+
 			myScript._key = EditorGUILayout.Popup("Select Key:", myScript._key, _keys); 
 		}
 

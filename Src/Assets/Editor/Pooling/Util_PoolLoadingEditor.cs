@@ -87,6 +87,13 @@ public class Util_PoolLoadingEditor : Editor {
 	void OnEnable() {
 
 		myScript = (Util_PoolLoading)target;
+
+		if(myScript._keys == null)
+			myScript._keys = new System.Collections.Generic.List<string>();
+
+		if(string.IsNullOrEmpty(myScript._keys[0])) {
+			myScript._keys[0] = "kEverytime";
+		}
 	}
 
 	public void AddDatabase() {

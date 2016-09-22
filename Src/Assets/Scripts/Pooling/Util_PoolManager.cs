@@ -191,8 +191,6 @@ public class Util_PoolManager {
 
 			if(resize) {
 
-				// error increment pool
-				Debug.LogWarning("Error increment pool for " + _tag);
 				Resize(_pooledList.Length + (int)(_pooledAmount*0.2f) + 1); // increment 20%
 			}
 		}

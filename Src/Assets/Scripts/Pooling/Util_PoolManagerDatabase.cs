@@ -89,7 +89,6 @@ public class Util_PoolManagerDatabase : MonoBehaviour {
 		}
 
 		Util_PoolManagerDatabase db = GetInstance(args[0]);
-		Util_PoolManager m = db.GetManager(args[1]);
 
 		if(db == null) {
 
@@ -97,6 +96,8 @@ public class Util_PoolManagerDatabase : MonoBehaviour {
 
 			return null;
 		}
+
+		Util_PoolManager m = db.GetManager(args[1]);
 
 		if(m == null) {
 
